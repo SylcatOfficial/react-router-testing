@@ -1,6 +1,6 @@
 {
   "name": "react-router-testing",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Testing react-router with react-router-library",
   "author": "Aral Roca Gomez <aral-rg@hotmail.com>",
   "main": "build/index.js",

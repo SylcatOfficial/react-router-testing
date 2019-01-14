@@ -1,7 +1,7 @@
 # React router testing
 
 
-![npm version](https://img.shields.io/badge/npm-v0.1.0-blue.svg) 
+![npm version](https://img.shields.io/badge/npm-v0.2.0-blue.svg) 
 
 *author: Aral Roca <aral-rg@hotmail.com>*
 
@@ -17,10 +17,10 @@ Is an utility to test react-router things.
 
 # Required
 
-* react-testing-library -> ^5.4.4
-* react -> ^16.7.0
-* react-dom -> ^16.7.0
-* react-router-dom -> ^4.3.1
+* react-testing-library -> `^5.4.4`
+* react -> `^16.7.0`
+* react-dom -> `^16.7.0`
+* react-router-dom -> `^4.3.1`
 
 ## Usage
 
@@ -31,8 +31,9 @@ import YourComponent from './YourComponent'
 
 describe('YourComponent', () => {
   test('example', () => {
-    const { container } = renderWithRouter(<YourComponent />)
-    expect(true).toBe(true)
+    const { getByText } = renderWithRouter(<YourComponent />)
+    const submitButton = getByText('Submit')
+    expect(submitButton.type).toBe('submit')
   })
 })
 ```
