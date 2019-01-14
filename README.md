@@ -1,6 +1,5 @@
 # React router testing
 
-> WARNING ⚠️  : This library is under construction....
 
 ![npm version](https://img.shields.io/badge/npm-v0.1.0-blue.svg) 
 
@@ -36,7 +35,5 @@ describe('YourComponent', () => {
     expect(true).toBe(true)
   })
 })
-
-
 ```
 
