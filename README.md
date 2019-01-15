@@ -27,13 +27,31 @@ Is an utility to test react-router things.
 ```js
 import React from 'react'
 import { renderWithRouter } from 'react-router-testing'
-import YourComponent from './YourComponent'
+import LinkButton from './LinkButton'
 
-describe('YourComponent', () => {
-  test('example', () => {
-    const { getByText } = renderWithRouter(<YourComponent />)
-    const submitButton = getByText('Submit')
-    expect(submitButton.type).toBe('submit')
+describe('LinkButton Component', () => {
+  test('LinkButton is disabled meanwhile is loading', () => {
+    const text = 'Some text'
+    const { getByText, rerender } = renderWithRouter(
+      <LinkButton text={text} />,
+    )
+    const LinkButtonNode = getByText(text)
+
+    expect(LinkButtonNode.disabled).toBe(false)
+
+    // update loading to true
+    rerender(
+      <LinkButton text={text} loading />,
+    )
+
+    expect(LinkButtonNode.disabled).toBe(true)
+
+    // update loading to false
+    rerender(
+      <LinkButton text={text} loading={false} />,
+    )
+
+    expect(LinkButtonNode.disabled).toBe(false)
   })
 })
 ```
