@@ -1,7 +1,7 @@
 # React router testing
 
 
-![npm version](https://img.shields.io/badge/npm-v0.2.0-blue.svg) 
+![npm version](https://img.shields.io/badge/npm-v0.2.1-blue.svg) 
 
 *author: Aral Roca <aral-rg@hotmail.com>*
 
@@ -55,4 +55,3 @@ describe('LinkButton Component', () => {
   })
 })
 ```
-
